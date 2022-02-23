@@ -4,8 +4,6 @@
 #Importing Python module (random)
 import random
 
-
-correctNum = 0
 #Display info       
 print('This is a program that quizzes you using addition problems.')
 
@@ -19,7 +17,7 @@ correctNum = firstAddend + secondAddend
 #Format both random integers previously generated into addition problem
 #turn both values into strings
 
-print(' 893' , firstAddend)
+print(' ' , firstAddend)
 print('+' , secondAddend)
 print('------')
 
@@ -27,6 +25,10 @@ print('------')
 # Prompt user for answer
 userInput = int(input('What is the correct answer? '))
 print()
+
+#Validate user input (no strings or floats)
+#while userInput != int :
+#    userInput = int(input('Invalid answer. Please enter a whole number'))    #This area needs fixing
 
 
 #Evaluate user input vs correctNum
