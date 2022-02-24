@@ -10,17 +10,15 @@ print('This is a program that quizzes you using addition problems.')
 
 
 def main ():
-    createRand ()
-    num1, num2 = getRandNum
-    dispProblem (num1, num2)
+    num1, num2 = createRand()
+    dispProblem(num1, num2)
     userInput = getInput ()
-    inspectAnswer (userInput, num1, num2)
+    inspectAnswer(userInput, num1, num2)
     endMessage ()
-    print()
-    input('End of Program. Press Enter key to end.')
+    
 
 # Function generate random addends using random.randint(0,999)  
-def createRand()
+def createRand():
     firstAddend =  random.randint(0,999)
     secondAddend =  random.randint(0,999)
     return firstAddend, secondAddend
@@ -31,24 +29,29 @@ def createRand()
 
 #Format both random integers previously generated into addition problem
 #turn both values into strings
-def dispProblem ()
-    print(' ' , firstAddend)
-    print('+' , secondAddend)
-    print('------')
+def dispProblem (n1, n2):
+    print (format(n1, '5'))
+    print ("+", end='')
+    print (format(n2, '4'))
+    print ("-----")
+
+    #print('+' , secondAddend)
+    #print(' ' , firstAddend)
+    #print('------')
     #Formatting edit needed here***
 
 # Calculate answers to the actual randomly generated problems
 
 
 # Prompt user for answer
-def getInput ()
+def getInput ():
     userInput = int(input('What is the correct answer? '))
     print()
     return userInput
 
 #Evaluate user input vs correctNum
-def inspectAnswer ()
-    correctNum = firstAddend + secondAddend
+def inspectAnswer (userInput, num1, num2):
+    correctNum = num1 + num2
     if userInput != correctNum:                            #If incorrect print incorrect response and correct answer
         print('That answer is incorrect. The correct answer is ', correctNum , '.')
     else:
@@ -56,9 +59,12 @@ def inspectAnswer ()
     
     
     
-def endMessage ()
-print()
-print('End of Program.')
+def endMessage ():
+    print()
+    input('End of Program. Press Enter key to end.')
+    
+    
+main ()
 
 
 
