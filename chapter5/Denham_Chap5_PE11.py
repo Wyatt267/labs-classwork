@@ -1,4 +1,12 @@
 
+####################################################################################
+# Developer Name:            Wyatt Denham
+# Program Name:              Denham_Chap5A_PE12.py
+# Due Date:                  02/25/2022
+# Program Description:       This program creates addition problems for a user to 
+#                            enter a response to. The user's response is evaluated  
+#                            as correct or incorrect.
+###################################################################################
 
 
 #Importing Python module (random)
@@ -23,10 +31,6 @@ def createRand():
     secondAddend =  random.randint(0,999)
     return firstAddend, secondAddend
 
-
-
-
-
 #Format both random integers previously generated into addition problem
 #turn both values into strings
 def dispProblem (n1, n2):
@@ -35,17 +39,9 @@ def dispProblem (n1, n2):
     print (format(n2, '4'))
     print ("-----")
 
-    #print('+' , secondAddend)
-    #print(' ' , firstAddend)
-    #print('------')
-    #Formatting edit needed here***
-
-# Calculate answers to the actual randomly generated problems
-
-
 # Prompt user for answer
 def getInput ():
-    userInput = int(input('What is the correct answer? '))
+    userInput = int(input('Enter the correct answer: '))
     print()
     return userInput
 
@@ -53,12 +49,12 @@ def getInput ():
 def inspectAnswer (userInput, num1, num2):
     correctNum = num1 + num2
     if userInput != correctNum:                            #If incorrect print incorrect response and correct answer
-        print('That answer is incorrect. The correct answer is ', correctNum , '.')
+        print('That answer is incorrect. The correct answer is ',correctNum , '.')
     else:
-        print('That amswer is correct! Good Job! ')        #If correct print correct response
+        print('That answer is correct! Good Job! ')        #If correct print correct response
+    print()
     
-    
-    
+# Display ending message    
 def endMessage ():
     print()
     input('End of Program. Press Enter key to end.')
