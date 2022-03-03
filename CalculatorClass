@@ -1,0 +1,31 @@
+#Calculator program
+
+def main():
+   choice = get_choice
+   if choice == 1:
+       add()
+   elif choice == 2:
+       subtract()
+   elif choice == 3:
+       multiply()
+   elif choice == 4:
+       divide()
+   else:
+       quit()
+    
+def get_choice():
+    print("------------This is a calculator menu------------")
+    print("(1)  Add")
+    print("(2)  Subtract")
+    print("(3)  Multiply")
+    print("(4)  Divide")
+    print("(5)  Quit")
+    print("--------------------------------------------------")
+    choice = int(input("\nEnter your choice (1-5): "))
+    
+    return choice
+    
+def add():
+    
+    
+    
