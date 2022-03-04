@@ -10,12 +10,13 @@ import random
 
 def main():
     display_info()
+    random_num = generate_random() 
     keep_going = "y"
     while keep_going == "y":
-        random_num = generate_random()
+        
         attempts = get_guess(random_num)
         keep_going = input("Would you like to play again (y to continue)? ")
-      
+    give_feedback(random_num, user_answer)  
       
       
       #Call functions and their parameters
@@ -63,6 +64,10 @@ def get_guess(random_num):
         print("Attempted Guesses: ", attempts)
         print("The correct number was: ", random_num) 
         keep_going = input("Would you like to play again (y to continue)? ")
+    return user_answer, random_num, attempts
+ 
+def give_feedback(user_answer, random_num, attempts):
+    
     
     
 main()
