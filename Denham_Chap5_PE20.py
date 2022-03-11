@@ -121,6 +121,7 @@ def ask_to_play_again():
         main()
     else:
         print("Goodbye.")
+        print("")
 
 #***************************************************************
 #  Function:        main
@@ -144,7 +145,6 @@ def main():
             user_guess = get_user_guess()
 
     if user_guess == 0:
-        attempts += 1
         print_you_gave_up()
         print_correct_number(random_int)
         print_attempted_guesses(attempts)

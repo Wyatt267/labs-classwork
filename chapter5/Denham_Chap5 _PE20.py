@@ -8,6 +8,8 @@
 
 import random
 
+play_again = "y"
+
 def main():
     display_info()
     random_num = generate_random() 
