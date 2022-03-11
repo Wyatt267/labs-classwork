@@ -13,7 +13,8 @@ print()
 # Main Function
 def main():
     #need while loop(?) and try/except in this
-  
+    personal_website = open("website.html", 'w'
+                            )
     name, description = get_user_input()
     #create_website(name, description)
     
