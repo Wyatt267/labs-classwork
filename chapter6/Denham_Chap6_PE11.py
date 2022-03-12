@@ -12,10 +12,24 @@ print()
 
 # Main Function
 def main():
-    #need while loop(?) and try/except in this
-    personal_website = open("website.html", 'w'
-                            )
-    name, description = get_user_input()
+    html_file = open('Denham_page.html' , 'w')
+    while name and description != '  ':
+        try:
+            name = input("Enter your name: ")
+        except ValueError:
+            print("Enter a valid name (letters only): ")
+        except Exception as err:
+            print()
+            print(name, "is not a valid name. Enter a valid name (letters only): ")
+        else:
+            try:
+                description = input("Describe yourself: ")
+            except ValueError:
+                print("Enter a valid description (letters only): ")
+    html_file.write(str(name)+ '/n')
+    html_file.write(str(description)+ '/n')
+    end_message()
+                
     #create_website(name, description)
     
     
