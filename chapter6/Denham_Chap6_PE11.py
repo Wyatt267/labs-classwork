@@ -5,30 +5,29 @@
 # Program Description:       This program uses input from the user to generate a 
 #                            personal web page.
 ###################################################################################
-
-# Display project info
-
-    
-    
+# Don't know what this below is: 
 from ctypes import HRESULT
 
 
-print("This program creates a personal webpage with user-entered information. ")
-print()
+
 
 # Main Function
 def main():
     display_program_documentation()
     name, description = get_user_input()
     html_file  = create_html_file('Denham_page.html')
-    html_content  = create_html_content(get_user_input.name, get_user_input.description)
+    html_content  = create_html_content(name, description)
     write_html_content_to_file(html_content)
-    html_file.close()
     display_html(html_content)
     
-    #create_website(name, description)
+   
     
-    
+#***************************************************************
+#  Function:        display_program_documentation
+#  Description:     This function displays program documentation.
+#  Parameters:      none
+#  Returns:         none              
+#***************************************************************    
 def display_program_documentation():
     print("####################################################################################")
     print("Developer Name:            Wyatt Denham ")
@@ -41,7 +40,16 @@ def display_program_documentation():
     
     
 # Get user name and self-description
+#***************************************************************
+#  Function:        get_user_input
+#  Description:     This program asks for a description and name from the user.
+#  Parameters:      none
+#  Returns:         name, descrription             
+#*************************************************************** 
 def get_user_input():
+    print("This program creates a personal webpage with user-entered information. ")
+    print()
+    print() 
     try:
         name = input("Enter your name: ")
     except ValueError:
@@ -56,16 +64,26 @@ def get_user_input():
             print("Enter a valid description (letters only): ") 
     return name, description
                   
-
+#***************************************************************
+#  Function:        create_html_file
+#  Description:     This function creates an HTML file.
+#  Parameters:      none
+#  Returns:         html_file            
+#*************************************************************** 
 def create_html_file():
     html_file = open('Denham_page.html' , 'w')
     return html_file
     
     
     
-    
-def create_html_content(get_user_input.name, get_user_input.description): # (PROBLEMS HERE)
-     html_content = 
+#***************************************************************
+#  Function:        create_html_content
+#  Description:     This function creates content for the HTML file
+#  Parameters:      name, description
+#  Returns:         none              
+#***************************************************************     
+def create_html_content(name, description): # (PROBLEMS HERE)
+    html_content = 
     '<html>
     <head>
     <title>My Personal Web Page</title>
@@ -87,12 +105,26 @@ def create_html_content(get_user_input.name, get_user_input.description): # (PRO
     
     
     
-    
+#***************************************************************
+#  Function:        write_html_content_to_file
+#  Description:     This function writes the HTML content to the HTML
+#                   file.
+#  Parameters:      html_file
+#  Returns:         none              
+#***************************************************************    
 def write_html_content_to_file(html_file):
     html_file.write()
     
     html_file.close()
     
+    
+#***************************************************************
+#  Function:        display_html
+#  Description:     This function displays HTML formatting for the
+#                   created website.
+#  Parameters:      none
+#  Returns:         none              
+#***************************************************************    
 def display_html(): 
     print("<html>")
     print("<head>")
@@ -110,7 +142,14 @@ def display_html():
 # ...more html tags...
     print("</body>")
     print("</html>")
-    
+
+
+#***************************************************************
+#  Function:        end_statements
+#  Description:     This function prints end of program information
+#  Parameters:      none
+#  Returns:         none              
+#***************************************************************    
 def end_statements():
     print("Web page was created successfully. ")
     print("End of program. ")
