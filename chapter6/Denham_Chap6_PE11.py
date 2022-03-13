@@ -77,7 +77,7 @@ def create_html_file(file_name):
 #  Returns:         html_content
 #***************************************************************
 def create_html_content(user_name, user_description):
-    html_content = ("<html>\n")+("<head>\n")+("<title>My Personal Web Page</title>\n")+("</head>\n")+("<body>\n")+("    <center>\n")+("        <div>{}</div>\n".format(user_name))+("    </center>\n")+("    <hr />\n")+("    <div>{}</div>\n".format(user_description))+("    <hr />\n")+("</body>\n")+("</html>\n")
+    html_content = ("<html>\n")+("<head>\n")+("<title>My Personal Web Page</title>\n")+("</head>\n")+("<body>\n")+("\t<center>\n")+("\t\t<div>{}</div>\n".format(user_name))+("\t</center>\n")+("\t<hr />\n")+("\t<div>{}</div>\n".format(user_description))+("\t<hr />\n")+("</body>\n")+("</html>\n")
     return html_content
 
 #***************************************************************
