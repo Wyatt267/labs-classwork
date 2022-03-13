@@ -59,13 +59,12 @@ def get_user_input():
 
 def create_html_file():
     html_file = open('Denham_page.html' , 'w')
-    return 'Denham_page.html'
+    return html_file
     
     
     
     
-    
-def create_html_content(get_user_input.name, get_user_input.description):
+def create_html_content(get_user_input.name, get_user_input.description): # (PROBLEMS HERE)
      html_content = 
     '<html>
     <head>
@@ -89,7 +88,7 @@ def create_html_content(get_user_input.name, get_user_input.description):
     
     
     
-def write_html_content_to_file():
+def write_html_content_to_file(html_file):
     html_file.write()
     
     html_file.close()
