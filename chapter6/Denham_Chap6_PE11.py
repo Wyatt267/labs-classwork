@@ -38,6 +38,7 @@ def get_user_name():
     except Exception as err:
         print()
         print(name, "is not a valid name. Enter a valid name (letters only): ")
+    
     return name
 
 
@@ -60,6 +61,7 @@ def get_user_description():
 
     return description
 
+
 #***************************************************************
 #  Function:        create_html_file
 #  Description:     This function creates an HTML file.
@@ -70,6 +72,7 @@ def create_html_file(file_name):
     html_file = open(file_name , 'w')
     return html_file
 
+
 #***************************************************************
 #  Function:        create_html_content
 #  Description:     This function creates content for the HTML file
@@ -77,8 +80,9 @@ def create_html_file(file_name):
 #  Returns:         html_content
 #***************************************************************
 def create_html_content(user_name, user_description):
-    html_content = ("<html>\n")+("<head>\n")+("<title>My Personal Web Page</title>\n")+("</head>\n")+("<body>\n")+("\t<center>\n")+("\t\t<div>{}</div>\n".format(user_name))+("\t</center>\n")+("\t<hr />\n")+("\t<div>{}</div>\n".format(user_description))+("\t<hr />\n")+("</body>\n")+("</html>\n")
+    html_content = ("<html>\n")+("<head>\n")+("\t<title>My Personal Web Page</title>\n")+("</head>\n")+("<body>\n")+("\t<center>\n")+("\t\t<div>{}</div>\n".format(user_name))+("\t</center>\n")+("\t<hr />\n")+("\t<div>{}</div>\n".format(user_description))+("\t<hr />\n")+("</body>\n")+("</html>\n")
     return html_content
+
 
 #***************************************************************
 #  Function:        write_html_content_to_file
@@ -91,6 +95,7 @@ def write_html_content_to_file(html_file, html_content):
     html_file.write(html_content) # Is this missing arguments? No, let me look in the book again
     html_file.close()
 
+
 #***************************************************************
 #  Function:        display_html
 #  Description:     This function displays HTML formatting for the
@@ -100,6 +105,7 @@ def write_html_content_to_file(html_file, html_content):
 #***************************************************************
 def display_html(html_content):
     print(html_content)
+
 
 #***************************************************************
 #  Function:        end_statements
